@@ -6,6 +6,8 @@ Querying [https://viewdns.info/reversewhois/](https://viewdns.info/reversewhois/
 
 Analyzing the WHOIS data for emails, names, addresses, states, zipcodes, etc is helpful for both gathering data and correlating domains. This script provides easy access to the information, with outputs in greppable format.
 
+This will method can only grab the top 500 results due to the nature of the website. 
+
 ## Usage
 
 ```
