@@ -34,18 +34,23 @@ def dnsinfo(options):
 
     dat = dat[1:len(dat)]
 
-    values = ["emails", "name", "org", "address", "city", "state", "zipcode", "country"]
+    # values = ["emails", "name", "org", "address", "city", "state", "zipcode", "country"]
     for domain in dat:
         try:
             w = whois.whois(domain)
             if not options.greppable:
                 output(options, domain + ":")
-            for val in values:
-                if not options.greppable:
-                    output(options, '\t{val}: {data}'.format(val=val, data=w[val]))
-                else:
-                    output(options, '{domain} : whois_{val} : {data}'.format(domain=domain,val=val,data=w[val]))
+            for val in w:
+                try:
+                    if not options.greppable:
+                        output(options, '\t{val}: {data}'.format(val=val, data=w[val]))
+                    else:
+                        output(options, '{domain} : whois_{val} : {data}'.format(domain=domain,val=val,data=w[val]))
+                except:
+                    pass
         except:
+
+            print("err")
             pass
 
 
