@@ -48,9 +48,10 @@ def dnsinfo(options):
                         output(options, '{domain} : whois_{val} : {data}'.format(domain=domain,val=val,data=w[val]))
                 except:
                     pass
+            print("Complete: {domain}".format(domain=domain))
         except:
 
-            print("err")
+            print("Error with domain: {domain}".format(domain=domain))
             pass
 
 
