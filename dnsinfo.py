@@ -59,9 +59,16 @@ def lookup_domains(dat, options):
                 except:
                     pass
             print("Complete: {domain}".format(domain=domain.strip()))
-        except:
+        except Exception as e:
 
-            print("Error with domain: {domain}".format(domain=domain.strip()))
+            if "No match for" in str(e): 
+
+                print("Error with domain (unregistered): {domain}".format(domain=domain.strip()))
+                output(options,"Error with domain (unregistered): {domain}".format(domain=domain.strip()))
+
+            else: 
+                print("Error with domain: {domain}".format(domain=domain.strip()))
+                output(options,"Error with domain: {domain}".format(domain=domain.strip()))
             pass
 
 
