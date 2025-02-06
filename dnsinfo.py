@@ -11,7 +11,7 @@ def dnsinfo(options):
     if options.file == "":
         entry = '+'.join(options.keywords.split(' '))
 
-        site = "https://viewdns.info/reversewhois/?q={entry}".format(entry=entry)
+        site = "https://viewdns.info/reversewhois/?q={entry}&t=1".format(entry=entry)
         headers = {
             'User-Agent' : "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0",
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
@@ -25,10 +25,14 @@ def dnsinfo(options):
 
         soup = bs(r.text, "html.parser")
 
-        tables = soup.find("table", border=1)
+        c = soup.find_all("td", {"class":"px-6 py-4 whitespace-nowrap text-base font-medium text-gray-900 dark:text-gray-100"})
+
+        #tables = soup.find("table", border=1)
         try:
-            for tr in tables.find_all("tr"):
-                dat.append( tr.find_all("td")[0].text )
+            for i in c:
+                dat.append(i.text)
+            # for tr in tables.find_all("tr"):
+            #     dat.append( tr.find_all("td")[0].text )
         except AttributeError as e:
             print("No domains returned, exiting...")
             return
