@@ -36,14 +36,14 @@ domain2.com
 ```
 
 ```
-python3 whoisxmlapi.py --apikey "<token>" -k "keyword1" -k "keyword2"
+python3 whoisxmlapi.py --apikey "<token>" -k "keyword1" -k "keyword2" -o outputfile.log
 
 domain1.com
 domain2.com
 ```
 
 ```
-python3 mass_whois.py -f domains_list.txt
+python3 mass_whois.py -f domains_list.txt -o whois_output.log
 
 domain1.com
     emails: abuse@godaddy.com
@@ -57,7 +57,7 @@ domain1.com
 ```
 
 ```
-python3 mass_whois.py -f domains_list.txt -g 
+python3 mass_whois.py -f domains_list.txt -g -o whois_greppable_output.log
 
 domain1.com : whois_emails : abuse@godaddy.com
 domain1.com : whois_name : Target Company
