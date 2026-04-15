@@ -12,7 +12,7 @@ def reverse(options):
         with open(options.keyword_file, 'r') as f:
             keywords = f.readlines()
     else:
-        keywords = [options.keywords]
+        keywords = options.keywords
 
     for keyword in keywords:
         print(f"Searching for: {keyword.strip()}")
