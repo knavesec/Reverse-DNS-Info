@@ -34,7 +34,7 @@ def reverse(options):
         count = 0
         for d in j['domainsList']: 
             dat.append(d.strip())
-            count += 0
+            count += 1
         print("Returned {} domains".format(count))
 
     for d in dat: 
