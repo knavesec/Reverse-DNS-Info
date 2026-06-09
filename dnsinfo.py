@@ -37,14 +37,17 @@ def dnsinfo(options):
 
         #tables = soup.find("table", border=1)
         try:
+            count = 0
             for i in c:
                 dat.append(i.text)
+                count += 1
             # for tr in tables.find_all("tr"):
             #     dat.append( tr.find_all("td")[0].text )
+            print("Returned {} domains".format(count))
         except AttributeError as e:
             print("No domains returned, exiting...")
             return
-
+    
     for d in dat: 
         if options.outfile != "":
             output(options, d.strip())

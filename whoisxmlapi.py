@@ -31,9 +31,11 @@ def reverse(options):
 
         r = requests.post(url=url, json=data)
         j = json.loads(r.text)
-
+        count = 0
         for d in j['domainsList']: 
             dat.append(d.strip())
+            count += 0
+        print("Returned {} domains".format(count))
 
     for d in dat: 
         if options.outfile != "":
