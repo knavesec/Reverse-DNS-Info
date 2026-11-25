@@ -1,0 +1,140 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.code-workspace
+
+# Project-specific output directories
+hunt/
+output/
+results/
+*.log
+*.jsonl
+
+# Data and domain list files (project-specific scratch)
+# Keep seeds_* if they're reference data, ignore if they're scratch
+aaaa
+aaaa.g
+*_domains
+*_domains_*
+mbcp*
+mcb_domains
+seeds_mbcp
+
+# Keyword and config files that may contain sensitive data
+keywords.txt
+kf.txt
+
+# Test/scratch files
+test.py
+scratch*.py
+temp*.py
+
+# API keys and credentials
+.env
+.env.*
+*.key
+*_key.txt
+credentials.json
+secrets.json
+
+# Cache directories
+.cache/
+*.cache
+cache/
+
+# Test fixtures - use live lookups instead
+**/fixtures/
+fixtures/
+
+# WHOIS resolver cache (if you want to ignore it)
+# Uncomment if cache should not be committed:
+# .whois_cache/
+# whois_cache/
+
+# Output files
+*.out
+*.csv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Rope project settings
+.ropeproject
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*

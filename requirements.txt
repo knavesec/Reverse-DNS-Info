@@ -1,3 +1,11 @@
-python-whois
-bs4
+# Nothing here is required: every script in this repo runs on the standard
+# library alone. Each entry below is used if present and cleanly skipped if not.
+#
+#   requests  - connection pooling for the HTTP paths (urllib is the fallback)
+#   dnspython - DNS lookups for the SPF/DMARC/MX/NS pivot; without it the code
+#               shells out to `dig`, and falls back to DNS-over-HTTPS after that
+#
+# python-whois and bs4 are no longer needed: WHOIS comes from the in-repo
+# whois_resolver package, and the viewdns scraper parses HTML without bs4.
 requests
+dnspython
